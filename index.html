@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github User Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./script.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <b id="devfinder">devfinder</b>
+        <button type="button" id="darkLightBtn">
+          LIGHT <i class="fa-regular fa-sun"></i>
+        </button>
+      </header>
+      <main>
+        <form class="searchForm">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input
+            type="text"
+            name="github username"
+            id="github-username"
+            class="githubUsername"
+            placeholder="Search Github Username..."
+          />
+          <p class="body search-error hidden" id="search-error">No results</p>
+          <p class="body search-error hidden" id="empty-field">Empty Field</p>
+          <button type="submit" id="BtnSubmit">Search</button>
+        </form>
+        <div class="userCard">
+          <div class="userTop">
+            <img
+              src="./img/353404225_6408995469145937_8733002377441968267_n.jpg"
+              alt="user profile image"
+              class="userImg"
+              id="user-img"
+            />
+            <div class="userTopInfo">
+              <div class="nameAndUsername">
+                <h2>David Makarov</h2>
+                <h3>davemakara</h3>
+              </div>
+              <div>
+                <span>Joined 26 Jul 2022</span>
+              </div>
+            </div>
+          </div>
+          <div class="userMain">
+            <p>This profile has no bio</p>
+            <ul class="userStats">
+              <li>
+                <h4>Repos</h4>
+                <h2>8</h2>
+              </li>
+              <li>
+                <h4>Followers</h4>
+                <h2>2</h2>
+              </li>
+              <li>
+                <h4>Following</h4>
+                <h2>2</h2>
+              </li>
+            </ul>
+            <div class="links">
+              <div class="insideLinks">
+                <i class="fa-solid fa-location-dot"></i>
+                <span>Tbilisi, Georgia</span>
+              </div>
+              <div class="insideLinks">
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#">Tbilisi, Georgia</a>
+              </div>
+              <div class="insideLinks">
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#">Tbilisi, Georgia</a>
+              </div>
+              <div class="insideLinks">
+                <i class="fa-solid fa-location-dot"></i>
+                <a href="#">Tbilisi, Georgia</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
