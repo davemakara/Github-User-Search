@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Github User Search</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -14,12 +20,12 @@
     <link rel="stylesheet" href="./style.css" />
     <script defer src="./script.js"></script>
   </head>
-  <body>
+  <body class="body">
     <div class="container">
       <header class="header">
-        <b id="devfinder">devfinder</b>
-        <button type="button" id="darkLightBtn">
-          LIGHT <i class="fa-regular fa-sun"></i>
+        <b id="header-logo" class="headerLogo">devfinder</b>
+        <button type="button" id="changeThemeBtn">
+          LIGHT <i class="fa-regular fa-lightbulb"></i>
         </button>
       </header>
       <main>
@@ -46,46 +52,46 @@
             />
             <div class="userTopInfo">
               <div class="nameAndUsername">
-                <h2>David Makarov</h2>
-                <h3>davemakara</h3>
+                <h2 class="userName" id="user-name">David Makarov</h2>
+                <h3 class="userUsername" id="user-username">davemakara</h3>
               </div>
               <div>
-                <span>Joined 26 Jul 2022</span>
+                <span class="date" id="user-date">Joined 26 Jul 2022</span>
               </div>
             </div>
           </div>
           <div class="userMain">
-            <p>This profile has no bio</p>
+            <p class="userBio" id="user-bio">This profile has no bio</p>
             <ul class="userStats">
               <li>
-                <h4>Repos</h4>
-                <h2>8</h2>
+                <h4 class="statsInfo" id="stats-info">Repos</h4>
+                <h2 class="statsNumber" id="stats-number">8</h2>
               </li>
               <li>
-                <h4>Followers</h4>
-                <h2>2</h2>
+                <h4 class="statsInfo" id="stats-info">Followers</h4>
+                <h2 class="statsNumber" id="stats-number">2</h2>
               </li>
               <li>
-                <h4>Following</h4>
-                <h2>2</h2>
+                <h4 class="statsInfo" id="stats-info">Following</h4>
+                <h2 class="statsNumber" id="stats-number">2</h2>
               </li>
             </ul>
             <div class="links">
               <div class="insideLinks">
                 <i class="fa-solid fa-location-dot"></i>
-                <span>Tbilisi, Georgia</span>
+                <span class="insideLinkInfo">Tbilisi, Georgia</span>
               </div>
               <div class="insideLinks">
-                <i class="fa-solid fa-location-dot"></i>
-                <a href="#">Tbilisi, Georgia</a>
+                <i class="fa-brands fa-twitter"></i>
+                <a href="#" class="insideLinkInfo">Tbilisi, Georgia</a>
               </div>
               <div class="insideLinks">
-                <i class="fa-solid fa-location-dot"></i>
-                <a href="#">Tbilisi, Georgia</a>
+                <i class="fa-solid fa-link"></i>
+                <a href="#" class="insideLinkInfo">Tbilisi, Georgia</a>
               </div>
               <div class="insideLinks">
-                <i class="fa-solid fa-location-dot"></i>
-                <a href="#">Tbilisi, Georgia</a>
+                <i class="fa-solid fa-building"></i>
+                <a href="#" class="insideLinkInfo">Tbilisi, Georgia</a>
               </div>
             </div>
           </div>

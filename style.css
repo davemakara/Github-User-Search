@@ -5,9 +5,10 @@
   text-decoration: none;
   list-style-type: none;
   transition: all 0.2s ease-in-out;
+  font-family: "Space Mono", monospace;
 }
 body {
-  background-color: aqua;
+  background-color: #141d2f;
   padding: 32px 24px 80px 24px;
   display: flex;
   justify-content: center;
@@ -15,11 +16,14 @@ body {
   min-height: 100vh;
 }
 
+.darkMain {
+  background-color: blue;
+}
+
 .container {
   margin: 0 auto;
   max-width: 730px;
   width: 100%;
-  background-color: greenyellow;
 }
 
 .hidden {
@@ -30,19 +34,82 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: aquamarine;
+}
+
+.headerLogo {
+  font-size: 1.625rem;
+  line-height: 38px;
+  color: #fff;
+  font-weight: 700;
+}
+
+#changeThemeBtn {
+  cursor: pointer;
+  outline: none;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2.5px;
+  font-size: 1rem;
+  line-height: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+.fa-lightbulb {
+  padding: 0 0 0 10px;
+  font-size: 1.2rem;
 }
 
 .searchForm {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 15px;
   width: 100%;
   padding: 7px;
-  margin-bottom: 16px;
+  margin: 36px 0 24px 0;
   background-color: #1e2a47;
 }
 
+.fa-magnifying-glass {
+  color: #0079ff;
+  font-size: 1.4rem;
+  padding: 0 10px;
+}
+
+.githubUsername {
+  font-size: 0.813rem;
+  margin-right: 9px;
+  border: none;
+  background: none;
+  outline: none;
+  color: #fff;
+  line-height: 25px;
+  padding: 6px 0;
+  flex-grow: 1;
+  min-width: 0;
+}
+
+#BtnSubmit {
+  font-size: 0.813rem;
+  letter-spacing: 0.5px;
+  padding: 12.5px 16px;
+  color: #fff;
+  background-color: #0079ff;
+  border-radius: 10px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.userCard {
+  background-color: #1e2a47;
+  padding: 32px 24px;
+  border-radius: 15px;
+}
 .userTop {
   display: grid;
   align-items: center;
@@ -53,7 +120,7 @@ body {
 }
 
 .userTopInfo {
-  background-color: blueviolet;
+  padding: 0 0 0 20px;
 }
 
 .userImg {
@@ -64,17 +131,95 @@ body {
   grid-column: 1 / 2;
   grid-row: span 3;
 }
-.username {
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
+.userUsername {
+  color: #0079ff;
+  font-size: 0.8rem;
+  line-height: 19px;
+  font-weight: 400;
+}
+
+.userName,
+.date,
+.userBio,
+.statsInfo,
+.statsNumber {
+  color: #fff;
+}
+
+.userName {
+  font-size: 1rem;
+  line-height: 20px;
+  font-weight: 600;
+}
+
+.date {
+  font-size: 0.8rem;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+.userBio {
+  opacity: 0.75;
+  margin: 32px 0 24px 0;
+  font-size: 14px;
 }
 
 .userStats {
   display: flex;
   justify-content: space-between;
-  background-color: burlywood;
+  background-color: #141d2f;
   padding: 18px 24px;
+  margin-bottom: 24px;
   border-radius: 10px;
+}
+
+.statsInfo {
+  font-size: 0.7rem;
+  line-height: 16px;
+  font-weight: 400;
+}
+.statsNumber {
+  font-size: 1rem;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.links {
+  display: grid;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  column-gap: 18px;
+  row-gap: 16px;
+}
+
+.insideLinks {
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.insideLinks i {
+  font-size: 20px;
+  width: 24px;
+}
+
+.insideLinkInfo {
+  color: #fff;
+  word-break: break-all;
+  margin-left: 18px;
+  font-size: 0.813rem;
+  line-height: 25px;
+  font-weight: 400;
+}
+
+a {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (min-width: 700px) {
@@ -95,12 +240,7 @@ body {
   }
 
   .links {
-    display: grid;
-    justify-content: space-between;
-    align-items: flex-start;
     grid-template-columns: repeat(2, auto);
-    grid-template-rows: repeat(2, auto);
-    column-gap: 18px;
     row-gap: 18px;
   }
 }

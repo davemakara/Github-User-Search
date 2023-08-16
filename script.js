@@ -1,4 +1,6 @@
-console.log("hello");
+"use strict";
+
+let darkTheme = true;
 
 const requestAPI = async function () {
   const response = await fetch("https://api.github.com/users/davemakara");
@@ -7,3 +9,9 @@ const requestAPI = async function () {
 };
 
 requestAPI();
+
+document.querySelector("#changeThemeBtn").addEventListener("click", () => {
+  darkTheme = !darkTheme;
+  console.log(darkTheme);
+  document.querySelector(".body").classList.toggle("darkMain");
+});
