@@ -16,10 +16,6 @@ body {
   min-height: 100vh;
 }
 
-.darkMain {
-  background-color: blue;
-}
-
 .container {
   margin: 0 auto;
   max-width: 730px;
@@ -43,7 +39,7 @@ body {
   font-weight: 700;
 }
 
-#changeThemeBtn {
+/* #changeThemeBtn {
   cursor: pointer;
   outline: none;
   background: none;
@@ -60,7 +56,7 @@ body {
 .fa-lightbulb {
   padding: 0 0 0 10px;
   font-size: 1.2rem;
-}
+} */
 
 .searchForm {
   display: flex;
@@ -159,9 +155,13 @@ body {
 }
 
 .userBio {
-  opacity: 0.75;
+  opacity: 0.8;
   margin: 32px 0 24px 0;
   font-size: 14px;
+}
+
+.noUserLink {
+  opacity: 0.5;
 }
 
 .userStats {
