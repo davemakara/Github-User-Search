@@ -138,7 +138,9 @@ body {
 .date,
 .userBio,
 .statsInfo,
-.statsNumber {
+.statsNumber,
+.errorMessage,
+.githubUsername::placeholder {
   color: #fff;
 }
 
@@ -220,6 +222,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.errorMessage {
+  font-size: 18px;
 }
 
 @media only screen and (min-width: 700px) {
