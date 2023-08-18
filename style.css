@@ -39,25 +39,6 @@ body {
   font-weight: 700;
 }
 
-/* #changeThemeBtn {
-  cursor: pointer;
-  outline: none;
-  background: none;
-  border: none;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 2.5px;
-  font-size: 1rem;
-  line-height: 18px;
-  font-weight: 600;
-  color: #fff;
-}
-.fa-lightbulb {
-  padding: 0 0 0 10px;
-  font-size: 1.2rem;
-} */
-
 .searchForm {
   display: flex;
   justify-content: center;
@@ -101,6 +82,17 @@ body {
   cursor: pointer;
 }
 
+#BtnSubmit:hover {
+  background-color: #2a8cfc;
+}
+
+.search-error {
+  color: #f74646;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 0 8px;
+}
+
 .userCard {
   background-color: #1e2a47;
   padding: 32px 24px;
@@ -132,6 +124,7 @@ body {
   font-size: 0.8rem;
   line-height: 19px;
   font-weight: 400;
+  padding-top: 5px;
 }
 
 .userName,
@@ -140,6 +133,8 @@ body {
 .statsInfo,
 .statsNumber,
 .errorMessage,
+.insideLinks,
+.insideLinkInfo,
 .githubUsername::placeholder {
   color: #fff;
 }
@@ -197,7 +192,6 @@ body {
 }
 
 .insideLinks {
-  color: #fff;
   display: flex;
   align-items: center;
 }
@@ -208,7 +202,6 @@ body {
 }
 
 .insideLinkInfo {
-  color: #fff;
   word-break: break-all;
   margin-left: 18px;
   font-size: 0.813rem;
@@ -228,10 +221,31 @@ a:hover {
   font-size: 18px;
 }
 
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 650px) {
+  .body {
+    padding: 32px 64px 80px 64px;
+  }
+
+  .searchForm {
+    padding: 10px;
+  }
+
+  .search-error {
+    padding: 0 15px 0 0;
+  }
+
+  .githubUsername {
+    font-size: 0.943rem;
+
+    padding: 8px 0;
+  }
+
+  #BtnSubmit {
+    font-size: 0.943rem;
+    padding: 13.5px 17px;
+  }
   .userTop {
     display: flex;
-    /* justify-content: space-between; */
   }
 
   .userTopInfo {
@@ -245,8 +259,96 @@ a:hover {
     height: 117px;
   }
 
+  .userName {
+    font-size: 1.1rem;
+  }
+  .userUsername {
+    font-size: 1rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+  }
+
+  .userMain {
+    padding: 0 16px;
+  }
+
+  .userBio {
+    font-size: 16px;
+  }
+
+  .statsInfo {
+    font-size: 0.8rem;
+  }
+  .statsNumber {
+    font-size: 1.1rem;
+  }
+
   .links {
     grid-template-columns: repeat(2, auto);
     row-gap: 18px;
+  }
+
+  .insideLinks i {
+    font-size: 22px;
+  }
+
+  .insideLinkInfo {
+    font-size: 0.883rem;
+  }
+}
+
+@media only screen and (min-width: 850px) {
+  .search-error {
+    padding: 0 20px 0 0;
+    font-size: 16px;
+  }
+
+  #BtnSubmit {
+    font-size: 0.943rem;
+    padding: 13px 22px;
+  }
+  .userCard {
+    padding: 48px;
+  }
+
+  .userTopInfo {
+    padding: 0 0 0 30px;
+  }
+  .userName {
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+  }
+  .userUsername {
+    font-size: 1.1rem;
+  }
+
+  .date {
+    font-size: 0.9rem;
+  }
+
+  .userMain {
+    padding: 0 0 0 140px;
+  }
+
+  .userStats {
+    padding: 18px 30px 22px;
+  }
+
+  .statsInfo {
+    font-size: 0.9rem;
+  }
+  .statsNumber {
+    font-size: 1.2rem;
+    margin-top: 5px;
+  }
+
+  .insideLinks i {
+    font-size: 22px;
+  }
+
+  .insideLinkInfo {
+    font-size: 0.9rem;
   }
 }

@@ -92,6 +92,10 @@ let renderCard = (dev) => {
 };
 
 const requestAPI = async function () {
+  if (loading) {
+    html = `<h1 class="errorMessage" id="error-message">Loading...</h1>`;
+    userCard.innerHTML = html;
+  }
   try {
     const response = await fetch("https://api.github.com/users/davemakara");
     if (!response.ok) {
@@ -99,6 +103,7 @@ const requestAPI = async function () {
     }
     const data = await response.json();
     console.log(data);
+    loading = false;
 
     //     html = ` <div class="userTop">
     //   <img
@@ -224,12 +229,18 @@ btnSearchUser.addEventListener("click", (e) => {
   const inputUsernameLowercase = inputUsername.value.toLowerCase();
 
   const getUserData = async function (user) {
+    loading = true;
+    if (loading) {
+      html = `<h1 class="errorMessage" id="error-message">Loading...</h1>`;
+      userCard.innerHTML = html;
+    }
     try {
       const response = await fetch(`https://api.github.com/users/${user}`);
       if (!response.ok) {
         throw new Error(`Problem occurred.. No user found!`);
       }
       const data = await response.json();
+      loading = false;
       console.log(data);
       loginInfo = data.login;
 
@@ -352,6 +363,8 @@ btnSearchUser.addEventListener("click", (e) => {
       emptyFieldError.classList.add("hidden");
       console.log("hello");
     }
+
+    inputUsername.value = "";
   };
 
   getUserData(inputUsernameLowercase);
