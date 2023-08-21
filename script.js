@@ -102,78 +102,8 @@ const requestAPI = async function () {
       throw new Error(`Problem occurred.. No user found!`);
     }
     const data = await response.json();
-    console.log(data);
+    // console.log(data);
     loading = false;
-
-    //     html = ` <div class="userTop">
-    //   <img
-    //     src="${data.avatar_url}"
-    //     alt="user profile image"
-    //     class="userImg"
-    //     id="user-img"
-    //   />
-    //   <div class="userTopInfo">
-    //     <div class="nameAndUsername">
-    //       <h2 class="userName" id="user-name">${data.name}</h2>
-    //       <h3 class="userUsername" id="user-username">@${data.login}</h3>
-    //     </div>
-    //     <div>
-    //       <span class="date" id="user-date">Joined ${renderDate(
-    //         data.created_at
-    //       )}</span>
-    //     </div>
-    //   </div>
-    //   </div>
-    //   <div class="userMain">
-    //       <p class="userBio" id="user-bio">
-    //       ${data.bio !== null ? data.bio : "This profile has no bio"}
-    //       </p>
-    //   <ul class="userStats">
-    //     <li>
-    //       <h4 class="statsInfo" id="stats-info">Repos</h4>
-    //       <h2 class="statsNumber" id="stats-number">${data.public_repos}</h2>
-    //     </li>
-    //     <li>
-    //       <h4 class="statsInfo" id="stats-info">Followers</h4>
-    //       <h2 class="statsNumber" id="stats-number">${data.followers}</h2>
-    //     </li>
-    //     <li>
-    //       <h4 class="statsInfo" id="stats-info">Following</h4>
-    //       <h2 class="statsNumber" id="stats-number">${data.following}</h2>
-    //     </li>
-    //   </ul>
-    //   <div class="links">
-    //     <div class="insideLinks">
-    //       <i class="fa-solid fa-location-dot"></i>
-    //       <span class="insideLinkInfo" id="locationInfo">${
-    //         data.location !== null ? data.location : "Not Available"
-    //       }</span>
-    //     </div>
-    //     <div class="insideLinks">
-    //       <i class="fa-brands fa-twitter"></i>
-    //       <a href="#" class="insideLinkInfo" id="twitterInfo">
-    //       ${
-    //         data.twitter_username !== null ? data.twitter_username : "Not Available"
-    //       }
-    //     </a>
-    //     </div>
-    //     <div class="insideLinks">
-    //       <i class="fa-solid fa-link"></i>
-    //       <a href="#" class="insideLinkInfo" id="blogInfo">
-    //       ${data.blog !== "" ? data.blog : "Not Available"}
-    //       </a>
-    //     </div>
-    //     <div class="insideLinks">
-    //       <i class="fa-solid fa-building"></i>
-    //       <a href="#" class="insideLinkInfo" id="companyInfo">
-    //       ${data.company !== null ? data.company : "Not Available"}
-    //       </a>
-    //     </div>
-    //   </div>
-    //   </div>`;
-
-    //     //   userCard.insertAdjacentHTML("beforeend", html);
-    //     userCard.innerHTML = html;
 
     renderCard(data);
 
@@ -203,18 +133,6 @@ const requestAPI = async function () {
     };
 
     checkLinks(location, twitter, blog, company);
-
-    //   if (data.twitter_username === null) {
-    //     userTwitter.classList.add("noUserLink");
-    //   }
-
-    //   if (data.blog === "") {
-    //     userBlog.classList.add("noUserLink");
-    //   }
-
-    //   if (data.company === null) {
-    //     userCompany.classList.add("noUserLink");
-    //   }
   } catch (err) {
     html = `<h1 class="errorMessage" id="error-message">${err.message}</h1>`;
     userCard.innerHTML = html;
@@ -241,81 +159,9 @@ btnSearchUser.addEventListener("click", (e) => {
       }
       const data = await response.json();
       loading = false;
-      console.log(data);
+      //   console.log(data);
       loginInfo = data.login;
 
-      // html = ` <div class="userTop">
-      //       <img
-      //         src="${data.avatar_url}"
-      //         alt="user profile image"
-      //         class="userImg"
-      //         id="user-img"
-      //       />
-      //       <div class="userTopInfo">
-      //         <div class="nameAndUsername">
-      //           <h2 class="userName" id="user-name">${data.name}</h2>
-      //           <h3 class="userUsername" id="user-username">@${data.login}</h3>
-      //         </div>
-      //         <div>
-      //           <span class="date" id="user-date">Joined ${renderDate(
-      //             data.created_at
-      //           )}</span>
-      //         </div>
-      //       </div>
-      //       </div>
-      //       <div class="userMain">
-      //           <p class="userBio" id="user-bio">
-      //           ${data.bio !== null ? data.bio : "This profile has no bio"}
-      //           </p>
-      //       <ul class="userStats">
-      //         <li>
-      //           <h4 class="statsInfo" id="stats-info">Repos</h4>
-      //           <h2 class="statsNumber" id="stats-number">${
-      //             data.public_repos
-      //           }</h2>
-      //         </li>
-      //         <li>
-      //           <h4 class="statsInfo" id="stats-info">Followers</h4>
-      //           <h2 class="statsNumber" id="stats-number">${data.followers}</h2>
-      //         </li>
-      //         <li>
-      //           <h4 class="statsInfo" id="stats-info">Following</h4>
-      //           <h2 class="statsNumber" id="stats-number">${data.following}</h2>
-      //         </li>
-      //       </ul>
-      //       <div class="links">
-      //         <div class="insideLinks">
-      //           <i class="fa-solid fa-location-dot"></i>
-      //           <span class="insideLinkInfo" id="locationInfo">${
-      //             data.location !== null ? data.location : "Not Available"
-      //           }</span>
-      //         </div>
-      //         <div class="insideLinks">
-      //           <i class="fa-brands fa-twitter"></i>
-      //           <a href="#" class="insideLinkInfo" id="twitterInfo">
-      //           ${
-      //             data.twitter_username !== null
-      //               ? data.twitter_username
-      //               : "Not Available"
-      //           }
-      //         </a>
-      //         </div>
-      //         <div class="insideLinks">
-      //           <i class="fa-solid fa-link"></i>
-      //           <a href="#" class="insideLinkInfo" id="blogInfo">
-      //           ${data.blog !== "" ? data.blog : "Not Available"}
-      //           </a>
-      //         </div>
-      //         <div class="insideLinks">
-      //           <i class="fa-solid fa-building"></i>
-      //           <a href="#" class="insideLinkInfo" id="companyInfo">
-      //           ${data.company !== null ? data.company : "Not Available"}
-      //           </a>
-      //         </div>
-      //       </div>
-      //       </div>`;
-
-      // userCard.innerHTML = html;
       renderCard(data);
 
       const userLocation = document.querySelector("#locationInfo");
@@ -361,7 +207,6 @@ btnSearchUser.addEventListener("click", (e) => {
     if (inputUsername.value !== "" && inputUsernameLowercase === loginInfo) {
       searchError.classList.add("hidden");
       emptyFieldError.classList.add("hidden");
-      console.log("hello");
     }
 
     inputUsername.value = "";
